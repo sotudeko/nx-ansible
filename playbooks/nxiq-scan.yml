@@ -1,0 +1,12 @@
+- hosts: localhost
+  tasks:
+    - name: Run a Nexus IQ CLI scan
+      nxiq_scan:
+        application: "{{ application }}"
+	      target: "{{ target }}"
+        stage: "{{ stage }}"
+      register: op
+
+    - debug:
+        var: op
+

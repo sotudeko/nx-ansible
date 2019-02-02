@@ -1,0 +1,11 @@
+{
+ "name": "{{ tag_name }}",
+ "attributes": { 
+    "buildUser": "{{ build_user }}",
+    "buildJob": "{{ build_tag }}",
+    "buildId": "{{ job_id }}",
+    "appVersion": "{{ build_version }}",
+    "buildUrl": "{{ build_url }}",
+    "iqscan": {{ lookup('file', scan_report) }}
+  }
+}

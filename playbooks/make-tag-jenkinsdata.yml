@@ -1,0 +1,11 @@
+- hosts: localhost
+  tasks:
+    - name: Create tag content
+      template:
+        src: tag.json.j2
+        dest: "{{ tag_data_file }}"
+      register: op
+
+    - debug:
+        var: op
+

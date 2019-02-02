@@ -1,0 +1,9 @@
+- hosts: localhost
+  tasks:
+     - name: List tags
+       nxrm_tag_list:
+       register: op
+
+     - debug:
+         var: op.meta
+

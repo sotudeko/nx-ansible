@@ -1,0 +1,11 @@
+- hosts: localhost
+  tasks:
+     - name: Delete tag 
+       nxrm_tag:
+         tag_name: "{{ tag_name }}"
+         state: absent
+       register: op
+
+     - debug:
+         var: op
+
